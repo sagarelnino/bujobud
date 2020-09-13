@@ -59,6 +59,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" href="css/style.css">
@@ -86,29 +87,29 @@ if (isset($_POST['submit'])) {
                         <div class="form-group">
                             <label for="fullname" class="title">Full Name:</label><br>
                             <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Enter Full Name" value="<?php echo isset($_POST['fullname']) ? $_POST['fullname'] : ''; ?>" required>
-                            <span class="fullname_error">Error</span>
+                            <span class="error-message" id="fullname_error"></span>
                         </div>
                         <div class="form-group">
                             <label for="username" class="title">Email:</label><br>
                             <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" required>
-                            <span class="email_error">Error</span>
+                            <span class="error-message" id="email_error"></span>
                         </div>
                         <div class="form-group">
                             <label for="password" class="title">Password:</label><br>
                             <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" required>
-                            <span class="password_error">Error</span>
+                            <span class="error-message" id="password_error"></span>
                         </div>
                         <div class="form-group">
                             <label for="password_confirm" class="title">Confirm Password:</label><br>
                             <input type="password" name="password_confirm" id="password_confirm" class="form-control" placeholder="Confirm Password" required>
-                            <span class="password_confirm_error">Error</span>
+                            <span class="error-message" id="password_confirm_error"></span>
                         </div>
 
                         <p class="title">Image:</p>
                         <div class="custom-file mb-3">
                             <input type="file" class="custom-file-input" id="customFile" name="image" required>
                             <label class="custom-file-label" for="customFile">Choose file</label>
-                            <span class="image_error">Error</span>
+                            <span class="error-message" id="image_error"></span>
                         </div>
 
                         <div class="form-group">
@@ -131,29 +132,51 @@ if (isset($_POST['submit'])) {
 <script src="js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
+    document.getElementById('signup-box').style.height = '590px';
     function validate() {
+        document.getElementById('signup-box').style.height = '660px';
         var check = 1;
-        if(document.getElementById('username').value == ''){
-            document.getElementById('username_error').style.display = 'block';
-            document.getElementById('username_error').innerText = 'ユーザー名は必要です';
-            document.getElementById('username').setAttribute('class','error-input');
+        if(document.getElementById('fullrname').value === ''){
+            document.getElementById('fullname_error').style.display = 'block';
+            document.getElementById('fullname_error').innerText = 'Please enter fullname';
+            document.getElementById('fullname').setAttribute('class','text-danger');
             check = 0;
         }else{
-            document.getElementById('username_error').style.display = 'none';
-            document.getElementById('username').removeAttribute('class','error-input');
-            document.getElementById('username').setAttribute('class','correct-input');
+            document.getElementById('fullname_error').style.display = 'none';
+            document.getElementById('fullname').removeAttribute('class','text-danger');
+            document.getElementById('fullname').setAttribute('class','text-success');
         }
-        if(document.getElementById('pwd').value == ''){
-            document.getElementById('pwd_error').style.display = 'block';
-            document.getElementById('pwd_error').innerText = 'パスワードは必要です';
-            document.getElementById('pwd').setAttribute('class','error-input');
+        if(document.getElementById('email').value === ''){
+            document.getElementById('email_error').style.display = 'block';
+            document.getElementById('email_error').innerText = 'Please enter email';
+            document.getElementById('email').setAttribute('class','text-danger');
             check = 0;
         }else{
-            document.getElementById('pwd_error').style.display = 'none';
-            document.getElementById('pwd').removeAttribute('class','error-input');
-            document.getElementById('pwd').setAttribute('class','correct-input');
+            document.getElementById('email_error').style.display = 'none';
+            document.getElementById('email').removeAttribute('class','text-danger');
+            document.getElementById('email').setAttribute('class','text-success');
         }
-        if(check == 1){
+        if(document.getElementById('password').value === '' || document.getElementById('password').value.length < 6){
+            document.getElementById('password_error').style.display = 'block';
+            document.getElementById('password_error').innerText = 'Please enter a password more than 5 characters';
+            document.getElementById('password').setAttribute('class','error-input');
+            check = 0;
+        }else{
+            document.getElementById('password_error').style.display = 'none';
+            document.getElementById('password').removeAttribute('class','error-input');
+            document.getElementById('password').setAttribute('class','correct-input');
+            if(document.getElementById('password').value !== document.getElementById('password_confirm').value){
+                document.getElementById('password_confirm_error').style.display = 'block';
+                document.getElementById('password_confirm_error').innerText = 'Both password should match';
+                document.getElementById('password_confirm').setAttribute('class','error-input');
+                check = 0;
+            }else{
+                document.getElementById('password_confirm_error').style.display = 'none';
+                document.getElementById('password_confirm').removeAttribute('class','error-input');
+                document.getElementById('password_confirm').setAttribute('class','correct-input');
+            }
+        }
+        if(check === 1){
             return true;
         }
         return false;

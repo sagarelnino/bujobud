@@ -12,3 +12,6 @@
     background-color:#0C2D48 !important;
     border-bottom: 2px solid #2E8BC0;
 }
+#repeat-info{
+    display: none;
+}

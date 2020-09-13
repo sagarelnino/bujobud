@@ -18,6 +18,7 @@ if(isset($_POST['submit'])){
         $image = $image_data['data'];
     }
     $user->updateUser($fullname,$phone,$image,$profession,$dob,$sex,$bio,$updated_at,$_SESSION['id']);
+    $user->addLog('Profile Updated',$_SESSION['id'],$updated_at);
     $_SESSION['message'] = 'Profile updated Successfully';
     header('location:editprofile.php');
 }

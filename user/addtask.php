@@ -25,6 +25,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.ico">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style_updated.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
@@ -49,7 +50,7 @@
                         <?php }
                         unset($_SESSION['message']);
                         ?>
-                        <form class="info-form col-md-8 offset-2" method="POST">
+                        <form class="info-form col-md-8 offset-2" method="POST" onchange="myfun()" onsubmit="validate()">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Select Task</label>
                                 <select class="custom-select" name="task_id">
@@ -67,6 +68,35 @@
                             <div class="form-group">
                                 <label class="form-check-label" for="exampleCheck1">Select Start Time</label>
                                 <input name="start_time" type="time" class="form-control" id="timecheck">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-check-label" for="exampleCheck1">Repeat</label>
+                                <input type="radio" name="is_repeat" id="is_repeat_1" value="0" checked>No
+                                <input type="radio" name="is_repeat" id="is_repeat_2" value="1">Yes
+                            </div>
+                            <div id="repeat-info">
+                                <div class="form-group">
+                                    <label class="form-check-label" for="exampleCheck1">Repeat Type</label>
+                                    <select class="form-control" name="repeat_type" id="repeat_type">
+                                        <option value="">Select One</option>
+                                        <option value="daily">Daily</option>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="monthly">Monthly</option>
+                                        <option value="yearly">Yearly</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-check-label" for="exampleCheck1">Repeat After</label>
+                                    <input name="repeat_after" type="number" min="1" class="form-control" id="repeat_after">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-check-label" for="exampleCheck1">End Date</label>
+                                    <input name="end_date" type="date" class="form-control" id="datecheck">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-check-label" for="exampleCheck1">Select End Time</label>
+                                    <input name="end_time" type="time" class="form-control" id="timecheck">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Task Details</label>
@@ -92,5 +122,17 @@
     <script src="../js/custom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script>
+        function myfun(){
+            if(document.getElementById('is_repeat_2').checked){
+                document.getElementById('repeat-info').style.display = 'block';
+            }else if(document.getElementById('is_repeat_1').checked){
+                document.getElementById('repeat-info').style.display = 'none';
+            }
+        }
+        function validate() {
+            var check = 1;
+        }
+    </script>
 </body>
 </html>
