@@ -34,7 +34,7 @@ require_once 'session_required.php';
                         <?php }
                         unset($_SESSION['message']);
                         ?>
-                        <form class="info-form" method="POST" action="update_profile.php">
+                        <form class="info-form" method="POST" action="update_profile.php" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="name">Full Name:</label>
                                 <input type="text" class="form-control" id="fullname" name="fullname" aria-describedby="fullnameHelp" placeholder="Update Full Name" value="<?php echo $userInfo->fullname ?>">
@@ -62,7 +62,8 @@ require_once 'session_required.php';
                             </div>
                             <div class="form-group">
                                 <label for="image">Image:</label>
-                                <input type="file" class="form-control" id="customFile" name="image" required>
+                                <input type="file" class="form-control" id="customFile" name="image">
+                                <span class="text-danger">You want to change? Already one exists!!</span>
                             </div>
 
                             <button type="submit" name="submit" class="btn btn-primary">Update</button>

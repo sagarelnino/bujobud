@@ -53,10 +53,11 @@ class User extends Database{
         $resultSet = $st->fetch(PDO::FETCH_OBJ);
         return $resultSet;
     }
-    public function updateUser($fullname,$phone,$profession,$dob,$sex,$bio,$updated_at,$id){
-        $st = $this->db->prepare("UPDATE user SET fullname=:fullname, phone=:phone, profession=:profession, dob=:dob, sex=:sex, bio=:bio, updated_at=:updated_at WHERE id=:id");
+    public function updateUser($fullname,$phone,$image,$profession,$dob,$sex,$bio,$updated_at,$id){
+        $st = $this->db->prepare("UPDATE user SET fullname=:fullname, phone=:phone, image=:image, profession=:profession, dob=:dob, sex=:sex, bio=:bio, updated_at=:updated_at WHERE id=:id");
         $st->bindParam(':fullname',$fullname);
         $st->bindParam(':phone',$phone);
+        $st->bindParam(':image',$image);
         $st->bindParam(':profession',$profession);
         $st->bindParam(':dob',$dob);
         $st->bindParam(':sex',$sex);
