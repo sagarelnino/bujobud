@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #0C2D48 !important;
+    padding: 10px 0;
+}
+.navbar-brand{
+    font-weight: 600;
+    font-size: 2em;
+    color: #262626;
+    margin-left: 5px;
+}
+
+
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    color: #ffffff !important;
+    font-weight:normal;
+    border: 2px solid #0C2D48;
+    transition: 0.7s;
+}
+
+.navbar-nav li a:hover {
+    background-color:#0C2D48 !important;
+    border-bottom: 2px solid #2E8BC0;
+}
+
+.navbar-nav li a:active {
+    background-color:#0C2D48 !important;
+    border-bottom: 2px solid #2E8BC0;
+}
+
+#banner{
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(../img/workout1.jpg);
+    color: #ffffff;
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    padding: 250px 0 200px;
+}
+
+
+#bg-info{
+    font-family: 'Lato', sans-serif;
+    background:#607988 !important;
+    height: 550px;
+}
+h2{
+	position: relative;
+}
+h2::after{
+	content: "";
+	width: 130px;
+	position: absolute;
+	margin: 0 auto;
+	height: 3px;
+	background: #e7ac09;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+}
+
+.carousel-inner .carousel-item .img-box{
+	width: 135px;
+    height: 135px;
+}
+.carousel-control-prev{
+	left: -100px;
+}
+.carousel-control-next{
+	right: -100px;
+}
+.carousel-indicators{
+	top: 320px;
+}
+@media (min-width: 320px) and (max-width: 640px) {
+	.carousel-inner .carousel-item p{
+		font-size: 14px;
+	}
+	.carousel-control-prev{
+		left: -40px;
+	}
+	.carousel-control-next{
+		right: -40px;
+	}
+ 	
+}
+#about h1{
+    text-align: center;
+}
+#about{
+    background:white;
+    padding-top: 80px;
+    text-align: justify;
+}
+#about p{
+    margin-top: 30px;
+}
+#about img{
+    positon: absolute;
+    width: 100%;
+    min-height:50vh;
+    margin-top: 30px;
+}
+section .section-title {
+    text-align: center;
+    color: #0e4c7e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+#footer {
+    margin-top: 1px;
+    padding: 60px 0;
+    background: #0e4c7e!important;
+}
+
+#footer h5 {
+    padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+#footer ul.social li {
+    padding: 3px 0;
+}
+
+#footer ul.social li a i {
+    margin-right: 5px;
+    font-size: 25px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+
+#footer ul.social li:hover a i {
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+#footer ul.social li a,
+#footer ul.quick-links li a {
+    color: #ffffff;
+}
+
+#footer ul.social li a:hover {
+    color: #eeeeee;
+}
+
+#footer ul.quick-links li {
+    padding: 3px 0;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+}
+
+#footer ul.quick-links li:hover {
+    padding: 3px 0;
+    margin-left: 5px;
+    font-weight: 700;
+}
+
+#footer ul.quick-links li a i {
+    margin-right: 5px;
+}
+
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px) {
+    #footer h5 {
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* LOg In */
+
+#login {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/homework3.jpg);
+}
+#login .container #login-row #login-column #login-box {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    max-width: 600px;
+    height: 350px;
+    border: 1px solid #9C9C9C;
+    border-radius: 10px;
+    background-color: #000000;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -40px;
+  }
+
+  /*Registration Form */
+  #signup {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../img/reg.jpg);
+    
+}
+ .title{
+    color:cyan;
+}
+
+#signup .container #signup-row #signup-column #signup-box{
+    margin-top: 80px;
+    margin-bottom: 100px;
+    max-width: 600px;
+    height: 560px;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    background-color: #000000;
+
+}
+#signup .container #signup-row #signup-column #signup-box #signup-form{
+    padding:  20px;
+}
+
+
+
+
+  
+
+
+
+
+

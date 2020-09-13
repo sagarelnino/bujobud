@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sidebar1{
+    width: 100%;
+    min-height: 100%;
+    background: rgb(210, 210, 253);
+}
+.sidebar2{
+    margin-bottom: 3%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(255, 247, 255);
+
+    
+}
+.profile-userpic img{
+    float: none;
+    margin-top: 20px;
+    margin-left: 50px;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+
+}
+.profile-usertitle {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .profile-usertitle-name {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+  
+  .profile-usertitle-job {
+    text-transform: uppercase;
+    color: #131318;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  .profile-desc-title {
+      margin-top: 25px;
+    color: #4897f1;
+    font-size: 17px;
+    font-weight: 600;
+}
+.profile-desc-text {
+    color: #000000;
+    font-size: 14px;
+}
+.margin-top-20 {
+    margin-top: 20px!important;
+}
+[class*=" fa-"]:not(.fa-stack), [class*=" glyphicon-"], [class*=" icon-"], [class^=fa-]:not(.fa-stack), [class^=glyphicon-], [class^=icon-] {
+    display: inline-block;
+    line-height: 14px;
+    -webkit-font-smoothing: antialiased;
+}
+.profile-desc-link i {
+    width: 22px;
+    font-size: 19px;
+    color: #13273b;
+    margin-right: 5px;
+}
+.website-details h5{
+    text-align: center;
+    margin-top: 100px;
+}
+.navbar {
+    
+    background-color: #646668 !important;
+}
+
+.navbar-nav li a {
+    color: #ffffff !important;
+    font-weight:normal;
+    border: 2px solid #646668 ;
+    transition: 0.7s;
+}
+
+.navbar-nav li a:hover {
+    background-color:#646668 2 !important;
+    border-bottom: 2px solid #112c3d;
+}
+#contents h2{
+    text-align: center;
+    padding: 50px;
+    color: teal;
+}
+.leftbar{
+    background: rgb(221, 220, 221);
+    border:1px solid rgb(255, 252, 252);
+    border-radius: 10px;
+    height: 300px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: 50px;
+
+}
+.rightbar{
+    background:rgb(221, 220, 221) ;
+    border:1px solid rgb(255, 252, 252);
+    border-radius: 10px;
+    height: 300px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: 50px;
+}
+
+/* Edit Profile Page */
+#profile-info h3{
+    text-align: center;
+    color: teal;
+    padding: 50px;
+
+}
+.info-form{
+    background: rgb(210, 210, 253);
+    padding: 7%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px teal, 0 0 20px teal, 0 0 10px teal;
+    margin-bottom: 3%;
+}
+
+/* ADD TAsk Page */
+.new-task h3{
+    text-align: center;
+    padding: 50px;
+    color: teal;
+}
+
+
