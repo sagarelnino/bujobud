@@ -9,12 +9,18 @@
         $task_id = $user_task->filter($_POST['task_id']);
         $start_date = $user_task->filter($_POST['start_date']);
         $start_time = $user_task->filter($_POST['start_time']);
-        $start = $start_date.' '.$start_time;
+        $start_dt = $start_date.' '.$start_time;
+        $is_repeat = $_POST['is_repeat'];
+        $repeat_type = $_POST['repeat_type'];
+        $repeat_after = $_POST['repeat_after'];
+        $end_date = $_POST['end_date'];
+        $end_time = $_POST['end_time'];
+        $end_dt = $end_date.' '.$end_time;
         $details = $user_task->filter($_POST['details']);
         $user_id = $_SESSION['id'];
         $status = NULL;
         $created_at = date('Y-m-d H:i:s');
-        $user_task->addUserTask($task_id,$user_id,$details,$start,$created_at);
+        $user_task->addUserTask($task_id,$user_id,$details,$start_dt,$is_repeat,$repeat_type,$repeat_after,$end_dt,$created_at);
         $user_task->addLog('Task added by user id '.$user_id,$user_id,$created_at);
         $_SESSION['message'] = 'New task added successfully';
     }
@@ -50,24 +56,27 @@
                         <?php }
                         unset($_SESSION['message']);
                         ?>
-                        <form class="info-form col-md-8 offset-2" method="POST" onchange="myfun()" onsubmit="validate()">
+                        <form class="info-form col-md-8 offset-2" method="POST" onchange="myfun()" onsubmit="return validate()">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Select Task</label>
-                                <select class="custom-select" name="task_id">
-                                    <option value="NULL">Choose new task</option>
+                                <select class="form-control" name="task_id" id="task_id">
+                                    <option value="">Choose new task</option>
                                     <?php foreach ($tasks as $singleTask){?>
                                         <option value="<?php echo $singleTask->id?>" title="<?php echo $singleTask->details?>"><?php echo $singleTask->task?></option>
                                     <?php } ?>
 
                                 </select>
+                                <span class="error-message" id="task_id_error"></span>
                             </div>
                             <div class="form-group">
                                 <label class="form-check-label" for="exampleCheck1">Start Date</label>
-                                <input name="start_date" type="date" class="form-control" id="datecheck">
+                                <input name="start_date" type="date" class="form-control" id="start_date">
+                                <span class="error-message" id="start_date_error"></span>
                             </div>
                             <div class="form-group">
                                 <label class="form-check-label" for="exampleCheck1">Select Start Time</label>
-                                <input name="start_time" type="time" class="form-control" id="timecheck">
+                                <input name="start_time" type="time" class="form-control" id="start_time">
+                                <span class="error-message" id="start_time_error"></span>
                             </div>
                             <div class="form-group">
                                 <label class="form-check-label" for="exampleCheck1">Repeat</label>
@@ -84,35 +93,32 @@
                                         <option value="monthly">Monthly</option>
                                         <option value="yearly">Yearly</option>
                                     </select>
+                                    <span class="error-message" id="repeat_type_error"></span>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-check-label" for="exampleCheck1">Repeat After</label>
                                     <input name="repeat_after" type="number" min="1" class="form-control" id="repeat_after">
+                                    <span class="error-message" id="repeat_after_error"></span>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-check-label" for="exampleCheck1">End Date</label>
-                                    <input name="end_date" type="date" class="form-control" id="datecheck">
+                                    <input name="end_date" type="date" class="form-control" id="end_date">
+                                    <span class="error-message" id="end_date_error"></span>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-check-label" for="exampleCheck1">Select End Time</label>
-                                    <input name="end_time" type="time" class="form-control" id="timecheck">
+                                    <input name="end_time" type="time" class="form-control" id="end_time">
+                                    <span class="error-message" id="end_time_error"></span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleFormControlTextarea1">Task Details</label>
                                 <textarea name="details" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div> <br>
-
                             <button type="submit" name="submit" class="btn btn-primary">Add Task</button>
                         </form>
-
-
                     </div>
-
                 </section>
-
-
-
             </div>
 
         </div>
@@ -132,6 +138,62 @@
         }
         function validate() {
             var check = 1;
+            if(document.getElementById('task_id').value === ''){
+                document.getElementById('task_id_error').style.display = 'block';
+                document.getElementById('task_id_error').innerText = 'Please Select One';
+                check = 0;
+            }else{
+                document.getElementById('task_id_error').style.display = 'none';
+            }
+            if(document.getElementById('start_date').value === ''){
+                document.getElementById('start_date_error').style.display = 'block';
+                document.getElementById('start_date_error').innerText = 'Please add one';
+                check = 0;
+            }else{
+                document.getElementById('start_date_error').style.display = 'none';
+            }
+            if(document.getElementById('start_time').value === ''){
+                document.getElementById('start_time_error').style.display = 'block';
+                document.getElementById('start_time_error').innerText = 'Please add one';
+                check = 0;
+            }else{
+                document.getElementById('start_time_error').style.display = 'none';
+            }
+            if(document.getElementById('is_repeat_2').checked){
+                if(document.getElementById('repeat_type').value === ''){
+                    document.getElementById('repeat_type_error').style.display = 'block';
+                    document.getElementById('repeat_type_error').innerText = 'Please add one';
+                    check = 0;
+                }else{
+                    document.getElementById('repeat_type_error').style.display = 'none';
+                }
+                
+                if(document.getElementById('repeat_after').value === ''){
+                    document.getElementById('repeat_after_error').style.display = 'block';
+                    document.getElementById('repeat_after_error').innerText = 'Please add one';
+                    check = 0;
+                }else{
+                    document.getElementById('repeat_after_error').style.display = 'none';
+                }
+                if(document.getElementById('end_date').value === ''){
+                    document.getElementById('end_date_error').style.display = 'block';
+                    document.getElementById('end_date_error').innerText = 'Please add one';
+                    check = 0;
+                }else{
+                    document.getElementById('end_date_error').style.display = 'none';
+                }
+                if(document.getElementById('end_time').value === ''){
+                    document.getElementById('end_time_error').style.display = 'block';
+                    document.getElementById('end_time_error').innerText = 'Please add one';
+                    check = 0;
+                }else{
+                    document.getElementById('end_time_error').style.display = 'none';
+                }
+            }
+            if(check === 1){
+                return true;
+            }
+            return false;
         }
     </script>
 </body>

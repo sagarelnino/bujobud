@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7d6e8766-3b74-495a-b930-96e214e05cfa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/UserTask.php" afterPath="$PROJECT_DIR$/Model/UserTask.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style_updated.css" afterPath="$PROJECT_DIR$/css/style_updated.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forgot_pass_update.php" afterPath="$PROJECT_DIR$/forgot_pass_update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signup.php" afterPath="$PROJECT_DIR$/signup.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/addtask.php" afterPath="$PROJECT_DIR$/user/addtask.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/all_task.php" afterPath="$PROJECT_DIR$/user/all_task.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/dashboard.php" afterPath="$PROJECT_DIR$/user/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/editprofile.php" afterPath="$PROJECT_DIR$/user/editprofile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/fetch_notification.php" afterPath="$PROJECT_DIR$/user/fetch_notification.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/update_profile.php" afterPath="$PROJECT_DIR$/user/update_profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verify.php" afterPath="$PROJECT_DIR$/verify.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,7 +20,7 @@
       <file leaf-file-name="editprofile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user/editprofile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-864">
+            <state relative-caret-position="-493">
               <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
               <folding />
             </state>
@@ -39,8 +30,58 @@
       <file leaf-file-name="addtask.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user/addtask.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="715">
-              <caret line="134" column="9" lean-forward="true" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
+            <state relative-caret-position="594">
+              <caret line="22" column="115" lean-forward="false" selection-start-line="22" selection-start-column="115" selection-end-line="22" selection-end-column="115" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTask.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model/UserTask.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+              <folding>
+                <marker date="1600013072862" expanded="true" signature="233:445" ph="INSERT INTO user_task... " />
+                <marker date="1600013072862" expanded="true" signature="1009:1045" ph="SELECT * FRO... user_task" />
+                <marker date="1600013072862" expanded="true" signature="1275:1321" ph="SELECT * FRO... user_task" />
+                <marker date="1600013072862" expanded="true" signature="1570:1639" ph="SELECT * FRO... user_task" />
+                <marker date="1600013072862" expanded="true" signature="1894:1970" ph="UPDATE user_... " />
+                <marker date="1600013072862" expanded="true" signature="2224:2242" ph="SELECT * FRO... task" />
+                <marker date="1600013072862" expanded="true" signature="2430:2464" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style_updated.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style_updated.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/signup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="145" column="87" lean-forward="true" selection-start-line="145" selection-start-column="87" selection-end-line="146" selection-end-column="85" />
+              <folding>
+                <marker date="1599994876260" expanded="true" signature="2634:2653" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="242" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -60,11 +101,13 @@
       <find>username</find>
       <find>pwd</find>
       <find>start</find>
+      <find>end_date</find>
     </findStrings>
     <replaceStrings>
       <replace>email</replace>
       <replace>password</replace>
       <replace>end</replace>
+      <replace>end_time</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -102,7 +145,6 @@
         <option value="$PROJECT_DIR$/user/navbar.php" />
         <option value="$PROJECT_DIR$/user/update_task.php" />
         <option value="$PROJECT_DIR$/user/delete_task.php" />
-        <option value="$PROJECT_DIR$/Model/UserTask.php" />
         <option value="$PROJECT_DIR$/user/update_task_user.php" />
         <option value="$PROJECT_DIR$/user/delete_task_user.php" />
         <option value="$PROJECT_DIR$/user/session_required.php" />
@@ -123,6 +165,7 @@
         <option value="$PROJECT_DIR$/user/dashboard.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/css/style_updated.css" />
+        <option value="$PROJECT_DIR$/Model/UserTask.php" />
         <option value="$PROJECT_DIR$/user/addtask.php" />
       </list>
     </option>
@@ -264,14 +307,16 @@
       <workItem from="1599971622384" duration="6136000" />
       <workItem from="1599987862824" duration="271000" />
       <workItem from="1599989855595" duration="9819000" />
+      <workItem from="1600009089309" duration="4093000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150491000" />
+    <option name="totallyTimeSpent" value="154584000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20364584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -483,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/UserTask.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="37" column="55" lean-forward="false" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/update_task_user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1647">
@@ -642,16 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="61" column="50" lean-forward="false" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
-          <folding>
-            <marker date="1599994876260" expanded="true" signature="2634:2653" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/verify.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -694,7 +722,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user/editprofile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-864">
+        <state relative-caret-position="-493">
           <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
           <folding />
         </state>
@@ -702,24 +730,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="239" column="1" lean-forward="false" selection-start-line="239" selection-start-column="1" selection-end-line="239" selection-end-column="1" />
+        <state relative-caret-position="443">
+          <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="242" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style_updated.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        <state relative-caret-position="513">
+          <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="145" column="87" lean-forward="true" selection-start-line="145" selection-start-column="87" selection-end-line="146" selection-end-column="85" />
+          <folding>
+            <marker date="1599994876260" expanded="true" signature="2634:2653" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/UserTask.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <marker date="1600013072862" expanded="true" signature="233:445" ph="INSERT INTO user_task... " />
+            <marker date="1600013072862" expanded="true" signature="1009:1045" ph="SELECT * FRO... user_task" />
+            <marker date="1600013072862" expanded="true" signature="1275:1321" ph="SELECT * FRO... user_task" />
+            <marker date="1600013072862" expanded="true" signature="1570:1639" ph="SELECT * FRO... user_task" />
+            <marker date="1600013072862" expanded="true" signature="1894:1970" ph="UPDATE user_... " />
+            <marker date="1600013072862" expanded="true" signature="2224:2242" ph="SELECT * FRO... task" />
+            <marker date="1600013072862" expanded="true" signature="2430:2464" ph="DELETE FROM " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user/addtask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="134" column="9" lean-forward="true" selection-start-line="134" selection-start-column="9" selection-end-line="134" selection-end-column="9" />
+        <state relative-caret-position="594">
+          <caret line="22" column="115" lean-forward="false" selection-start-line="22" selection-start-column="115" selection-end-line="22" selection-end-column="115" />
           <folding />
         </state>
       </provider>

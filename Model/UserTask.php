@@ -3,12 +3,16 @@ include_once 'Database.php';
 
 class UserTask extends Database{
 
-    public function addUserTask($user_id,$task_id,$details,$start_dt,$created_at){
-        $st = $this->db->prepare("INSERT INTO user_task(user_id,task_id,details,start_dt,created_at) VALUES (:user_id,:task_id,:details,:start_dt,:created_at)");
+    public function addUserTask($user_id,$task_id,$details,$start_dt,$is_repeat,$repeat_type,$repeat_after,$end_dt,$created_at){
+        $st = $this->db->prepare("INSERT INTO user_task(user_id,task_id,details,start_dt,is_repeat,repeat_type,repeat_after,end_dt,created_at) VALUES (:user_id,:task_id,:details,:start_dt,:is_repeat,:repeat_type,:repeat_after,:end_dt,:created_at)");
         $st->bindParam(':user_id',$user_id);
         $st->bindParam(':task_id',$task_id);
         $st->bindParam(':details',$details);
         $st->bindParam(':start_dt',$start_dt);
+        $st->bindParam(':is_repeat',$is_repeat);
+        $st->bindParam(':repeat_type',$repeat_type);
+        $st->bindParam(':repeat_after',$repeat_after);
+        $st->bindParam(':end_dt',$end_dt);
         $st->bindParam(':created_at',$created_at);
         $st->execute();
         return true;

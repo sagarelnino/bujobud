@@ -238,6 +238,9 @@ section .section-title {
 #signup .container #signup-row #signup-column #signup-box #signup-form{
     padding:  20px;
 }
+.error-message{
+    display: none;
+}
 
 
 
