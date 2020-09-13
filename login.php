@@ -50,11 +50,11 @@ if(isset($_POST['submit'])){
                             <h3 class="text-center title">Login</h3>
                             <div class="form-group">
                                 <label for="email" class="title">Email:</label><br>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Enter email">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Enter email"  value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" required>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="title">Password:</label><br>
-                                <input type="password" name="password" id="password" class="form-control" placeholder="Enter password">
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" required>
                             </div>
                             <div class="form-group">
                                 <br>

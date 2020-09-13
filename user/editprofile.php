@@ -62,7 +62,7 @@ require_once 'session_required.php';
                             </div>
                             <div class="form-group">
                                 <label for="image">Image:</label>
-                                <input type="file" class="custom-file-input" id="customFile" name="image" required>
+                                <input type="file" class="form-control" id="customFile" name="image" required>
                             </div>
 
                             <button type="submit" name="submit" class="btn btn-primary">Update</button>
