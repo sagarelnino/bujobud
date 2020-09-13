@@ -2,6 +2,7 @@
     require_once 'session_required.php';
     require_once '../Model/UserTask.php';
     require_once '../Model/Task.php';
+    $page = 'addTask';
     $user_task = new UserTask();
     $task = new Task();
     $tasks = $task->getTasks();
@@ -20,7 +21,7 @@
         $user_id = $_SESSION['id'];
         $status = NULL;
         $created_at = date('Y-m-d H:i:s');
-        $user_task->addUserTask($task_id,$user_id,$details,$start_dt,$is_repeat,$repeat_type,$repeat_after,$end_dt,$created_at);
+        $user_task->addUserTask($user_id,$task_id,$details,$start_dt,$is_repeat,$repeat_type,$repeat_after,$end_dt,$created_at);
         $user_task->addLog('Task added by user id '.$user_id,$user_id,$created_at);
         $_SESSION['message'] = 'New task added successfully';
     }
@@ -80,8 +81,8 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-check-label" for="exampleCheck1">Repeat</label>
-                                <input type="radio" name="is_repeat" id="is_repeat_1" value="0" checked>No
-                                <input type="radio" name="is_repeat" id="is_repeat_2" value="1">Yes
+                                <input type="radio" name="is_repeat" id="is_repeat_1" value="0" checked> No
+                                <input type="radio" name="is_repeat" id="is_repeat_2" value="1"> Yes
                             </div>
                             <div id="repeat-info">
                                 <div class="form-group">

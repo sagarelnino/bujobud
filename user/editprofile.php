@@ -1,5 +1,6 @@
 <?php
 require_once 'session_required.php';
+$page = 'editProfile';
 ?>
 <!DOCTYPE html>
 <html lang="en">

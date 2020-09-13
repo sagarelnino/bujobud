@@ -1,6 +1,7 @@
 <?php
     require_once 'session_required.php';
     require_once '../Model/Task.php';
+    $page = 'dashboard';
     $task = new Task();
     $tasks = $task->getTasks();
 ?>
@@ -56,24 +57,55 @@
     <!-- Modal content -->
     <div class="modal-content">
         <span class="close">&times;</span>
-        <form class="info-form col-md-8 offset-2">
+        <form class="info-form col-md-8 offset-2" onchange="myfun()">
             <div class="form-group">
-                <label for="task_id">Select Task</label>
-                <select class="custom-select" name="task_id" id="task_id" required>
-                    <option value="NULL">Choose new task</option>
-                    <?php foreach ($tasks as $task){ ?>
-                        <option value="<?php echo $task->id?>" title="<?php $task->details ?>"><?php echo $task->task?></option>
+                <label for="exampleInputEmail1">Select Task</label>
+                <select class="form-control" name="task_id" id="task_id">
+                    <option value="">Choose new task</option>
+                    <?php foreach ($tasks as $singleTask){?>
+                        <option value="<?php echo $singleTask->id?>" title="<?php echo $singleTask->details?>"><?php echo $singleTask->task?></option>
                     <?php } ?>
+
                 </select>
+                <span class="error-message" id="task_id_error"></span>
             </div>
             <div class="form-group">
-                <label for="details">Task Details</label>
-                <textarea name="details" class="form-control" id="details" rows="3" placeholder="Enter task details"></textarea>
+                <label class="form-check-label" for="exampleCheck1">Select Start Time</label>
+                <input name="start_time" type="time" class="form-control" id="start_time">
+                <span class="error-message" id="start_time_error"></span>
             </div>
             <div class="form-group">
-                <label for="start_time">Start Time</label>
-                <input type="time" class="form-control" name="start_time" id="start_time" placeholder="Enter start time" required>
+                <label class="form-check-label" for="exampleCheck1">Repeat</label>
+                <input type="radio" name="is_repeat" id="is_repeat_1" value="0" checked> No
+                <input type="radio" name="is_repeat" id="is_repeat_2" value="1"> Yes
             </div>
+            <div id="repeat-info">
+                <div class="form-group">
+                    <label class="form-check-label" for="exampleCheck1">Repeat Type</label>
+                    <select class="form-control" name="repeat_type" id="repeat_type">
+                        <option value="">Select One</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                    <span class="error-message" id="repeat_type_error"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label" for="exampleCheck1">Repeat After</label>
+                    <input name="repeat_after" type="number" min="1" class="form-control" id="repeat_after">
+                    <span class="error-message" id="repeat_after_error"></span>
+                </div>
+                <div class="form-group">
+                    <label class="form-check-label" for="exampleCheck1">Select End Time</label>
+                    <input name="end_time" type="time" class="form-control" id="end_time">
+                    <span class="error-message" id="end_time_error"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Task Details</label>
+                <textarea name="details" class="form-control" id="details" rows="3"></textarea>
+            </div> <br>
             <button type="button" name="submit" class="btn btn-primary" id="add_task">Add Task</button>
         </form>
     </div>
@@ -90,6 +122,9 @@
         document.getElementById('task_id').value = null;
         document.getElementById('details').value = '';
         document.getElementById('start_time').value = '';
+        document.getElementById('end_time').value = '';
+        document.getElementById('repeat_type').value = '';
+        document.getElementById('repeat_after').value = '';
     }
     $(document).ready(function() {
         var calendar = $('#calendar').fullCalendar({
@@ -123,27 +158,72 @@
                     }
                 };
                 document.getElementById('add_task').addEventListener('click',function () {
-                    var task_id = $('#task_id').val();
-                    var details = $('#details').val();
-                    start_ind = moment(start).format('Y-MM-DD');
-                    var start_time = $('#start_time').val();
-                    /*start_ind = start_date.substr(0, start_date.lastIndexOf(' '));*/
-                    /*end_ind = moment(end).format('Y-MM-DD');*/
-                    /*end_date = end_date.substr(0, end_date.lastIndexOf(' '));*/
-                    /*var end_time = $('#end_time').val();*/
-                    var start_final = start_ind + ' ' + start_time;
-                    $.ajax({
-                        url:"add_task.php",
-                        type:"POST",
-                        data:{task_id:task_id, start_date:start_final, details:details},
-                        success:function()
-                        {
-                            calendar.fullCalendar('refetchEvents');
-                            reset();
-                            modal.style.display = "none";
-                            alert("Task Added Successfully");
+                    var check = 1;
+                    if(document.getElementById('task_id').value === ''){
+                        document.getElementById('task_id_error').style.display = 'block';
+                        document.getElementById('task_id_error').innerText = 'Please Select One';
+                        check = 0;
+                    }else{
+                        document.getElementById('task_id_error').style.display = 'none';
+                    }
+
+                    if(document.getElementById('start_time').value === ''){
+                        document.getElementById('start_time_error').style.display = 'block';
+                        document.getElementById('start_time_error').innerText = 'Please add one';
+                        check = 0;
+                    }else{
+                        document.getElementById('start_time_error').style.display = 'none';
+                    }
+                    if(document.getElementById('is_repeat_2').checked){
+                        if(document.getElementById('repeat_type').value === ''){
+                            document.getElementById('repeat_type_error').style.display = 'block';
+                            document.getElementById('repeat_type_error').innerText = 'Please add one';
+                            check = 0;
+                        }else{
+                            document.getElementById('repeat_type_error').style.display = 'none';
                         }
-                    })
+
+                        if(document.getElementById('repeat_after').value === ''){
+                            document.getElementById('repeat_after_error').style.display = 'block';
+                            document.getElementById('repeat_after_error').innerText = 'Please add one';
+                            check = 0;
+                        }else{
+                            document.getElementById('repeat_after_error').style.display = 'none';
+                        }
+
+                        if(document.getElementById('end_time').value === ''){
+                            document.getElementById('end_time_error').style.display = 'block';
+                            document.getElementById('end_time_error').innerText = 'Please add one';
+                            check = 0;
+                        }else{
+                            document.getElementById('end_time_error').style.display = 'none';
+                        }
+                    }
+                    if(check === 1){
+                        var task_id = $('#task_id').val();
+                        var details = $('#details').val();
+                        var start_date = moment(start).format('Y-MM-DD');
+                        var start_time = $('#start_time').val();
+                        var is_repeat = $('#is_repeat_1').val();
+                        var repeat_type = $('#repeat_type').val();
+                        var repeat_after = $('#repeat_after').val();
+                        var end_date = moment(end).format('Y-MM-DD');
+                        var end_time = $('#end_time').val();
+                        var start_final = start_date + ' ' + start_time;
+                        var end_final = end_date + ' ' + end_time;
+                        $.ajax({
+                            url:"add_task.php",
+                            type:"POST",
+                            data:{task_id:task_id, start_date:start_final, is_repeat:is_repeat,repeat_type:repeat_type,repeat_after:repeat_after, end_date:end_final, details:details},
+                            success:function()
+                            {
+                                calendar.fullCalendar('refetchEvents');
+                                reset();
+                                modal.style.display = "none";
+                                alert("Task Added Successfully");
+                            }
+                        })
+                    }
                 });
                 /*var title = prompt("Enter Event Title");
 
@@ -218,8 +298,64 @@
 
         });
     });
-</script>
 
+</script>
+<script>
+    function myfun(){
+        if(document.getElementById('is_repeat_2').checked){
+            document.getElementById('repeat-info').style.display = 'block';
+        }else if(document.getElementById('is_repeat_1').checked){
+            document.getElementById('repeat-info').style.display = 'none';
+        }
+    }
+    function validate() {
+        var check = 1;
+        if(document.getElementById('task_id').value === ''){
+            document.getElementById('task_id_error').style.display = 'block';
+            document.getElementById('task_id_error').innerText = 'Please Select One';
+            check = 0;
+        }else{
+            document.getElementById('task_id_error').style.display = 'none';
+        }
+
+        if(document.getElementById('start_time').value === ''){
+            document.getElementById('start_time_error').style.display = 'block';
+            document.getElementById('start_time_error').innerText = 'Please add one';
+            check = 0;
+        }else{
+            document.getElementById('start_time_error').style.display = 'none';
+        }
+        if(document.getElementById('is_repeat_2').checked){
+            if(document.getElementById('repeat_type').value === ''){
+                document.getElementById('repeat_type_error').style.display = 'block';
+                document.getElementById('repeat_type_error').innerText = 'Please add one';
+                check = 0;
+            }else{
+                document.getElementById('repeat_type_error').style.display = 'none';
+            }
+
+            if(document.getElementById('repeat_after').value === ''){
+                document.getElementById('repeat_after_error').style.display = 'block';
+                document.getElementById('repeat_after_error').innerText = 'Please add one';
+                check = 0;
+            }else{
+                document.getElementById('repeat_after_error').style.display = 'none';
+            }
+
+            if(document.getElementById('end_time').value === ''){
+                document.getElementById('end_time_error').style.display = 'block';
+                document.getElementById('end_time_error').innerText = 'Please add one';
+                check = 0;
+            }else{
+                document.getElementById('end_time_error').style.display = 'none';
+            }
+        }
+        if(check === 1){
+            return true;
+        }
+        return false;
+    }
+</script>
 
 
 

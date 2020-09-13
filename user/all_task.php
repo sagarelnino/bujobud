@@ -2,6 +2,7 @@
 require_once 'session_required.php';
 require_once '../Model/UserTask.php';
 require_once '../Model/Task.php';
+$page = 'all_task';
 $user_task = new UserTask();
 $task = new Task();
 $user_tasks = $user_task->getSortedTaskUserByUserId($_SESSION['id']);

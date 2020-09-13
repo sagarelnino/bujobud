@@ -7,19 +7,19 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item <?php if($page == 'dashboard'){ echo 'active'; } ?>">
                 <a class="nav-link" href="dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?php if($page == 'editProfile'){ echo 'active'; } ?>">
                 <a class="nav-link" href="editprofile.php">Edit Profile</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?php if($page == 'addTask'){ echo 'active'; } ?>">
                 <a class="nav-link" href="addtask.php">Add Task</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?php if($page == 'update_password'){ echo 'active'; } ?>">
                 <a class="nav-link" href="update_password.php">Manage Password</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?php if($page == 'all_task'){ echo 'active'; } ?>">
                 <a class="nav-link" href="all_task.php">All Tasks</a>
             </li>
             <li class="nav-item dropdown">

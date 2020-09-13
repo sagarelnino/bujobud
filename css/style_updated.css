@@ -8,9 +8,8 @@
 .warning{
     margin-top: 2%;
 }
-.navbar-nav li a:active {
-    background-color:#0C2D48 !important;
-    border-bottom: 2px solid #2E8BC0;
+.active {
+    border-bottom: 2px solid #0C2D48;
 }
 #repeat-info{
     display: none;

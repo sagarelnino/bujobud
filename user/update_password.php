@@ -1,6 +1,7 @@
 <?php
 require_once 'session_required.php';
 require_once '../Model/User.php';
+$page = 'update_password';
 $user = new User();
 $userInfo = $user->getUserById($_SESSION['id']);
 if(isset($_POST['submit'])){
