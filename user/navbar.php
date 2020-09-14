@@ -22,8 +22,11 @@
             <li class="nav-item <?php if($page == 'all_task'){ echo 'active'; } ?>">
                 <a class="nav-link" href="all_task.php">All Tasks</a>
             </li>
+            <li class="nav-item <?php if($page == 'notifications'){ echo 'active'; } ?>">
+                <a class="nav-link" href="notifications.php">Notifications</a>
+            </li>
             <li class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Notifications</a>
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Reminders</a>
                 <ul class="dropdown-menu"></ul>
             </li>
         </ul>

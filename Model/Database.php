@@ -58,6 +58,13 @@ class Database{
         $resultSet = $st->fetchAll(PDO::FETCH_OBJ);
         return $resultSet;
     }
+    public function getLogById($id){
+        $st = $this->db->prepare('SELECT * FROM log WHERE id=:id');
+        $st->bindParam(':id',$id);
+        $st->execute();
+        $resultSet = $st->fetch(PDO::FETCH_OBJ);
+        return $resultSet;
+    }
     public function deleteLog($id){
         $st = $this->db->prepare('DELETE FROM log WHERE id=:id');
         $st->bindParam(':id',$id);
