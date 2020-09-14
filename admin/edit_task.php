@@ -1,6 +1,7 @@
 <?php
 require_once 'session_required_admin.php';
 require_once '../Model/Task.php';
+$page = 'add_task';
 $task = new Task();
 $taskInfo = $task->getTaskById($_GET['id']);
 if(isset($_POST['submit'])){

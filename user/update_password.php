@@ -81,5 +81,4 @@ if(isset($_POST['submit'])){
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
                 <script src="../js/bootstrap.min.js"></script>
 </body>
-
 </html>

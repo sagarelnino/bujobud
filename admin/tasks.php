@@ -1,6 +1,7 @@
 <?php
 require_once 'session_required_admin.php';
 require_once '../Model/Task.php';
+$page = 'tasks';
 $task = new Task();
 $tasks = $task->getTasks();
 ?>
@@ -76,14 +77,3 @@ $tasks = $task->getTasks();
 </body>
 
 </html>
-start_date = $.fullCalendar.formatDate(start, "Y-MM-DD HH:mm:ss");
-start_date = start_date.substr(0, start_date.lastIndexOf(' '));
-end_date = $.fullCalendar.formatDate(end, "Y-MM-DD HH:mm:ss");
-end_date = end_date.substr(0, end_date.lastIndexOf(' '));
-var start_time = $('#start_time').val();
-var end_time = $('#end_time').val();
-var start = start_date + ' ' + start_time;
-var end = end_date + ' ' + end_time;
-
-start=moment(start).format('Y-MM-DD HH:mm:ss');
-end=moment(end).format('Y-MM-DD HH:mm:ss');

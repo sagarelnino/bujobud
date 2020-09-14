@@ -1,5 +1,6 @@
 <?php
     require_once 'session_required_admin.php';
+    $page = 'dashboard';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +33,16 @@
         <div class="col-md-10 sidebar2">
             <?php include 'navbar.php'; ?>
             <div class="col-md-12">
-
+                <div class="pl-4 mt-3">
+                    <h3>Important Links</h3>
+                    <ul>
+                        <li><a href="add_task.php" class="mt-2 btn btn-outline-success">Add Task</a> </li>
+                        <li><a href="tasks.php" class="mt-2 btn btn-outline-success">All Tasks</a> </li>
+                        <li><a href="users.php" class="mt-2 btn btn-outline-success">Users</a> </li>
+                        <li><a href="update_password.php" class="mt-2 btn btn-outline-success">Update Password</a> </li>
+                        <li><a href="logs.php" class="mt-2 btn btn-outline-success">Log</a> </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

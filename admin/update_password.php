@@ -1,6 +1,7 @@
 <?php
 require_once 'session_required_admin.php';
 require_once '../Model/Admin.php';
+$page = 'update_password';
 $admin = new Admin();
 $adminInfo = $admin->getAdminById($_SESSION['admin_id']);
 if(isset($_POST['submit'])){

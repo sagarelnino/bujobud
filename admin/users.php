@@ -1,6 +1,7 @@
 <?php
 require_once 'session_required_admin.php';
 require_once '../Model/User.php';
+$page = 'users';
 $user = new User();
 $users = $user->getUsers();
 ?>

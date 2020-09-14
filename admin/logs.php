@@ -1,6 +1,7 @@
 <?php
 require_once 'session_required_admin.php';
 require_once '../Model/User.php';
+$page = 'logs';
 $user = new User();
 $logs = $user->getLogs();
 ?>
