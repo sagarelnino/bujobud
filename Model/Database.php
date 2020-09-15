@@ -46,7 +46,7 @@ class Database{
         }
     }
     public function getLogs(){
-        $st = $this->db->prepare('SELECT * FROM log');
+        $st = $this->db->prepare('SELECT * FROM log ORDER BY created_at DESC');
         $st->execute();
         $resultSet = $st->fetchAll(PDO::FETCH_OBJ);
         return $resultSet;
