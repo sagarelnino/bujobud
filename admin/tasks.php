@@ -15,7 +15,7 @@ $tasks = $task->getTasks();
     <link rel="stylesheet" href="../css/style_updated.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" href="profile.css">
-    <title>Log List</title>
+    <title>Task List</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@ $tasks = $task->getTasks();
 
                 <section id="profile-info">
                     <div class="col-md-12">
-                        <h3> Log List </h3>
+                        <h3> Task List </h3>
                         <?php
                         if(!empty($_SESSION['message'])){?>
                             <h3 style="color: red" class="text-center"><?php echo $_SESSION['message']?></h3>

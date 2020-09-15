@@ -1,6 +1,7 @@
 <?php
     require_once 'session_required.php';
     require_once '../Model/UserTask.php';
+    $page = 'all_task';
     $user_task = new UserTask();
     $taskUserInfo = $user_task->getTaskUserById($_GET['id']);
     $task_date_time = explode(' ',$taskUserInfo->start_dt);
