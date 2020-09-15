@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d6e8766-3b74-495a-b930-96e214e05cfa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/tasks.php" afterPath="$PROJECT_DIR$/admin/tasks.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user/update_task_user.php" afterPath="$PROJECT_DIR$/user/update_task_user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,11 +43,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tasks.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tasks.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/tasks.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+            <state relative-caret-position="486">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="794">
+              <caret line="119" column="7" lean-forward="false" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -122,7 +131,6 @@
         <option value="$PROJECT_DIR$/Model/User.php" />
         <option value="$PROJECT_DIR$/user/fetch_notification.php" />
         <option value="$PROJECT_DIR$/user/update_profile.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/forgot_pass_update.php" />
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/signup.php" />
@@ -154,6 +162,7 @@
         <option value="$PROJECT_DIR$/user/load.php" />
         <option value="$PROJECT_DIR$/user/update_task_user.php" />
         <option value="$PROJECT_DIR$/admin/tasks.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -305,12 +314,12 @@
       <workItem from="1600108002963" duration="2754000" />
       <workItem from="1600139247456" duration="48000" />
       <workItem from="1600179017708" duration="873000" />
-      <workItem from="1600183404736" duration="5263000" />
+      <workItem from="1600183404736" duration="5305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179758000" />
+    <option name="totallyTimeSpent" value="179800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -489,13 +498,6 @@
             <marker date="1599993395193" expanded="true" signature="315:417" ph="..." />
             <marker date="1599993395193" expanded="true" signature="315:477" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -768,8 +770,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/tasks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        <state relative-caret-position="486">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="119" column="7" lean-forward="false" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
           <folding />
         </state>
       </provider>

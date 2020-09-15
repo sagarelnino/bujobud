@@ -24,7 +24,7 @@
                     Do you need to free your mental stress?
                     You should join with us and have a look how we can make your life easier. Plan your your whole week/month/year, let us handle the matter of reminding you about your schedule through Push Notifications.
                 </p>
-                <a class="btn btn-outline-primary mt-3" href="#" role="button">Get started</a>
+                <a class="btn btn-outline-primary mt-3" href="signup.php" role="button">Get started</a>
             </div>
         </div>
     </div>
@@ -51,10 +51,7 @@
                             <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Paul Mitchel</strong>
                             </h5>
                             <h6 class="text-dark m-0">Student</h6>
-                            <p class="m-0 pt-3 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
-                                turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus.
-                                Suspendisse varius nibh non aliquet.</p>
+                            <p class="m-0 pt-3 text-white">Hello everyone! My name is Paul Mitchel. Bujobud is playing very effective role in my life. I am not good at maintaining a scheduled life and that’s why I had to face many embracing and unwanted situation only for not maintaining proper time schedule. But after joining this platform, now  I can manage everything in time by getting enough help from Bujobud. I will obviously recommend everyone to try this platform.</p>
                         </div>
                         <div class="carousel-item text-center">
                             <div class="img-box p-1 border rounded-circle m-auto">
@@ -64,10 +61,7 @@
                             <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Steve Fonsi</strong>
                             </h5>
                             <h6 class="text-dark m-0">Teacher</h6>
-                            <p class="m-0 pt-3 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
-                                turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus.
-                                Suspendisse varius nibh non aliquet.</p>
+                            <p class="m-0 pt-3 text-white">Hello everyone! My name is Steve Fonsi.  I am a teacher.  Bujobud is helping me to complete my all daily task at scheduled time. Now I can make my all class sequentially and I never forget about my any class mistakenly. The stress of lots of work can’t make me worry anymore. Thank you Bujobud for make my life easier than before.</p>
                         </div>
                         <div class="carousel-item text-center">
                             <div class="img-box p-1 border rounded-circle m-auto">
@@ -77,10 +71,7 @@
                             <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Daniel vebar</strong>
                             </h5>
                             <h6 class="text-dark m-0">Researcher</h6>
-                            <p class="m-0 pt-3 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
-                                turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus.
-                                Suspendisse varius nibh non aliquet.</p>
+                            <p class="m-0 pt-3 text-white">Hi!  My name is Daniel Daver.  I am a researcher. I love this platform. I will suggest you to join this platform if you have lots of work to do and usually you forget to do those work in time. Because Bujobud you remind you about your task in time and you can store your activities for whole month/year. </p>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
